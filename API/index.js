@@ -18,6 +18,6 @@ app.use((request, response, next)=>{
 
 app.use('/', router)
 
-app.listen(PORT, ()=>{
+app.listen(process.env.PORT || PORT, ()=>{
     console.log(`APP Started at http://localhost:${PORT}`);
 });
