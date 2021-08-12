@@ -14,7 +14,7 @@ const getAllBooks = (request, response) => {
 
 const getBookById = (request, response) => {
     console.log(request.params);
-    db.query(`select * from bookstall.books where book_id=${request.params.id}`, (err, res) =>{
+    db.query(`select * from bookstall.books where book_id="${request.params.id}"`, (err, res) =>{
         if(err)
         {
             console.log(err);
